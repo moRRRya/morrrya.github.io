@@ -29,7 +29,6 @@
             overflow-x: hidden;
         }
 
-        /* Header Navigation */
         header {
             background-color: rgba(10, 12, 16, 0.9);
             border-bottom: 1px solid var(--border-color);
@@ -72,7 +71,6 @@
             color: var(--accent-glow);
         }
 
-        /* Hero Section */
         .hero {
             padding: 10rem 2rem 6rem;
             max-width: 1200px;
@@ -101,7 +99,6 @@
             margin: 0 auto 2.5rem;
         }
 
-        /* Interactive Dashboard Simulator */
         .dashboard-container {
             max-width: 1000px;
             margin: 0 auto 6rem;
@@ -214,7 +211,6 @@
             color: var(--accent-glow);
         }
 
-        /* Performance Table */
         .table-section {
             max-width: 1200px;
             margin: 0 auto 6rem;
@@ -258,7 +254,6 @@
             font-weight: bold;
         }
 
-        /* Footer Compliance */
         footer {
             border-top: 1px solid var(--border-color);
             background: var(--bg-secondary);
@@ -305,9 +300,9 @@
                     <div class="control-group">
                         <label for="regime-select">Select Simulation Macro Regime</label>
                         <select id="regime-select" onchange="updateSimulator()">
+                            <option value="balanced">Balanced Macro Cycle (Normal Trajectory)</option>
                             <option value="expansion">Pure Economic Expansion (High Growth / Low Inflation)</option>
                             <option value="stagflation">Stagflationary Shock (Low Growth / High Inflation)</option>
-                            <option value="balanced">Balanced Macro Cycle (Normal Trajectory)</option>
                         </select>
                     </div>
                     <div class="control-group" style="display: flex; flex-direction: column; justify-content: center;">
@@ -320,7 +315,9 @@
                     <div class="allocation-bars">
                         <h3>Calculated Asset Allocation Weights</h3>
                         <div class="bar-container">
-                            <div class="bar-label"><span>Equities (SGX/NYSE)</span><span id="weight-eq">33.3%</span></div>
+                            <div class="bar-label"><span>Equities (SGX/NYSE)</span><span id="weight-eq">45.0%</span></div>
                             <div class="bar-fill-bg"><div class="bar-fill" id="bar-eq"></div></div>
                         </div>
                         <div class="bar-container">
+                            <div class="bar-label"><span>Sovereign Bonds (MAS/UST)</span><span id="weight-bond">35.0%</span></div>
+                            <div class="bar-fill-bg"><div class="bar-fill" id="bar-bond"></div></div>
