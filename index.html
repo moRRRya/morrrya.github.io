@@ -42,21 +42,23 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1.2rem 2rem;
+            padding: 0.8rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+        /* Responsive Navbar Logo Integration */
         .logo {
-            font-weight: 800;
-            font-size: 1.4rem;
-            letter-spacing: 1px;
-            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            height: 40px;
+            width: auto;
         }
 
-        .logo span {
-            color: var(--accent-glow);
+        .logo svg {
+            height: 100%;
+            width: auto;
         }
 
         .nav-links a {
@@ -71,8 +73,9 @@
             color: var(--accent-glow);
         }
 
+        /* Hero and Mathematical Blueprint Layout */
         .hero {
-            padding: 10rem 2rem 6rem;
+            padding: 9rem 2rem 4rem;
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
@@ -97,6 +100,18 @@
             color: var(--text-muted);
             max-width: 700px;
             margin: 0 auto 2.5rem;
+        }
+
+        .hero-blueprint {
+            width: 100%;
+            max-width: 750px;
+            margin: 0 auto 3rem;
+            display: block;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
         .dashboard-container {
@@ -273,7 +288,18 @@
 
     <header>
         <div class="nav-container">
-            <div class="logo">moRRya<span>.quant</span></div>
+            <!-- BRAND LOGO SYSTEM INTEGRATION -->
+            <div class="logo">
+                <svg xmlns="http://w3.org" viewBox="0 -15 380 120">
+                    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800">
+                        <text x="10" y="65" font-size="52" fill="#f4f6f8" letter-spacing="-2">mo</text>
+                        <text x="85" y="65" font-size="56" fill="#00f0ff" font-weight="900" letter-spacing="-2">R</text>
+                        <text x="128" y="65" font-size="56" fill="#00f0ff" font-weight="900" letter-spacing="-1">R</text>
+                        <text x="172" y="65" font-size="52" fill="#f4f6f8" letter-spacing="-2">ya</text>
+                        <text x="232" y="65" font-size="20" font-weight="400" fill="#8b949e" letter-spacing="1">.quant</text>
+                    </g>
+                </svg>
+            </div>
             <div class="nav-links">
                 <a href="#architecture">Architecture</a>
                 <a href="#simulator">Live Terminal</a>
@@ -284,40 +310,18 @@
 
     <main>
         <section class="hero" id="architecture">
-            <h1>Autonomous Cyber-Physical <br><span>Asset Allocation Engines</span></h1>
-            <p>Fusing Wall Street factor frameworks with Singapore-style operational execution to completely eliminate human behavioral latency from systemic risk management.</p>
-            <p style="font-size: 1rem; font-weight: bold; color: var(--text-main);">FOUNDER & CEO: moRRya</p>
-        </section>
-
-        <section class="dashboard-section" id="simulator">
-            <div class="dashboard-container">
-                <div class="dashboard-header">
-                    <div>CORE ENGINE STATUS: ACTIVE (STABLE)</div>
-                    <div>TERMINAL ID: QN-2026-X</div>
-                </div>
-
-                <div class="simulator-controls">
-                    <div class="control-group">
-                        <label for="regime-select">Select Simulation Macro Regime</label>
-                        <select id="regime-select" onchange="updateSimulator()">
-                            <option value="balanced">Balanced Macro Cycle (Normal Trajectory)</option>
-                            <option value="expansion">Pure Economic Expansion (High Growth / Low Inflation)</option>
-                            <option value="stagflation">Stagflationary Shock (Low Growth / High Inflation)</option>
-                        </select>
-                    </div>
-                    <div class="control-group" style="display: flex; flex-direction: column; justify-content: center;">
-                        <label style="margin-bottom: 0;">QuantumNest™ Processing Protocol</label>
-                        <div style="color: var(--accent-glow); font-size: 1.1rem; font-weight: bold;" id="protocol-status">Markov-State Transition Loop Active</div>
-                    </div>
-                </div>
-
-                <div class="output-grid">
-                    <div class="allocation-bars">
-                        <h3>Calculated Asset Allocation Weights</h3>
-                        <div class="bar-container">
-                            <div class="bar-label"><span>Equities (SGX/NYSE)</span><span id="weight-eq">45.0%</span></div>
-                            <div class="bar-fill-bg"><div class="bar-fill" id="bar-eq"></div></div>
-                        </div>
-                        <div class="bar-container">
-                            <div class="bar-label"><span>Sovereign Bonds (MAS/UST)</span><span id="weight-bond">35.0%</span></div>
-                            <div class="bar-fill-bg"><div class="bar-fill" id="bar-bond"></div></div>
+            <!-- CORE LOGO GRAPHIC STRUCTURAL NODE INFRASTRUCTURE -->
+            <svg class="hero-blueprint" xmlns="http://w3.org" viewBox="0 0 850 330">
+                <g stroke="#21262d" stroke-width="0.5" opacity="0.5">
+                    <line x1="50" y1="50" x2="800" y2="50" />
+                    <line x1="50" y1="120" x2="800" y2="120" />
+                    <line x1="50" y1="190" x2="800" y2="190" />
+                    <line x1="50" y1="260" x2="800" y2="260" />
+                    <line x1="150" y1="30" x2="150" y2="280" />
+                    <line x1="370" y1="30" x2="370" y2="280" />
+                    <line x1="590" y1="30" x2="590" y2="280" />
+                </g>
+                <g transform="translate(30, 20)">
+                    <path d="M 60,240 L 110,130 L 150,180 L 220,60" fill="none" stroke="#00f0ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 60,240 L 150,180 L 220,240" fill="none" stroke="#0070f3" stroke-width="1.5" stroke-dasharray="4,4"/>
+                    <path d="M 110,130 L 220,240" fill="none" stroke="#0070f3" stroke-width="1.5"/>
