@@ -296,28 +296,32 @@
                     <div>TERMINAL ID: QN-2026-X</div>
                 </div>
 
+                <!-- Fixed and completed control block container -->
                 <div class="simulator-controls">
                     <div class="control-group">
-                        <label for="regime-select">Select Simulation Macro Regime</label>
-                        <select id="regime-select" onchange="updateSimulator()">
-                            <option value="balanced">Balanced Macro Cycle (Normal Trajectory)</option>
-                            <option value="expansion">Pure Economic Expansion (High Growth / Low Inflation)</option>
-                            <option value="stagflation">Stagflationary Shock (Low Growth / High Inflation)</option>
+                        <label for="macro-regime">Macroeconomic Regime</label>
+                        <select id="macro-regime">
+                            <option value="growth">Incentivized Structural Growth</option>
+                            <option value="inflation">High Inflation Contraction</option>
+                            <option value="defensive">Stagnant Defensive Consolidation</option>
                         </select>
                     </div>
-                    <div class="control-group" style="display: flex; flex-direction: column; justify-content: center;">
-                        <label style="margin-bottom: 0;">QuantumNest™ Processing Protocol</label>
-                        <div style="color: var(--accent-glow); font-size: 1.1rem; font-weight: bold;" id="protocol-status">Markov-State Transition Loop Active</div>
+                    <div class="control-group">
+                        <label for="risk-profile">Risk Optimization Profile</label>
+                        <select id="risk-profile">
+                            <option value="aggressive">Max Alpha / Leveraged Risk</option>
+                            <option value="balanced">Risk Parity Balanced</option>
+                            <option value="conservative">Capital Preservation First</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="output-grid">
                     <div class="allocation-bars">
-                        <h3>Calculated Asset Allocation Weights</h3>
+                        <h3>Dynamic Allocations</h3>
                         <div class="bar-container">
-                            <div class="bar-label"><span>Equities (SGX/NYSE)</span><span id="weight-eq">45.0%</span></div>
-                            <div class="bar-fill-bg"><div class="bar-fill" id="bar-eq"></div></div>
+                            <div class="bar-label"><span>Equities</span><span id="eq-val">40%</span></div>
+                            <div class="bar-fill-bg"><div class="bar-fill" id="eq-bar" style="width: 40%;"></div></div>
                         </div>
                         <div class="bar-container">
-                            <div class="bar-label"><span>Sovereign Bonds (MAS/UST)</span><span id="weight-bond">35.0%</span></div>
-                            <div class="bar-fill-bg"><div class="bar-fill" id="bar-bond"></div></div>
+                            <div class="bar-label"><span>Fixed Income</span><span id="fi-val">40%</span></div>
